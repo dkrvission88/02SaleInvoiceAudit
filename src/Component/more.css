@@ -1,0 +1,59 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.modal-wrapper2{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background:rgba(189 189 189 0.9);
+}
+
+.moreO {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  
+  background: white;
+  width: 22%;
+
+  border: 1px solid gray;
+
+   top:20%;
+  left:88%;
+  transform: translate(-50%,-50%); 
+  border-radius: 5px 5px 5px 5px;
+  padding: 15px 15px 15px 15px;
+}
+.dublicate,
+.material-symbols-outlined,
+.m,
+.print,
+.download {
+  background: white;
+  font-size: 12px;
+}
+.m {
+  border: none;
+  margin-left: -10px;
+}
+/* .m:hover {
+  background-color: rgb(252, 251, 251);
+} */
+
+.dublicate {
+  
+  padding: 5px;
+}
+.print {
+  
+  padding: 5px;
+}
+.download{
+  
+  padding: 10px;
+}

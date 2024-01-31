@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.smsCotainer{
+    position: relative;
+    /* display: flex; */
+
+    top:30%;
+    left:30%;
+    /* transform: translate(-50%,-50%); */
+    bottom: 0;
+    right: 0;
+   
+   
+   
+}
+
+.headsms{
+    background:  
+    #ECF5FF;
+    padding: 10px;
+    /* margin-bottom: 10px; */
+    position: relative;
+    width: 40%;
+
+    top:10%;
+    left:0;
+    right: 0;
+    bottom: 0;
+
+    /* top:50%;
+    left:50%;
+    transform: translate(-50%,-50%); */
+    /* width: 200%; */
+
+}
+.paragraph{
+    padding: 30px;
+    width: 40%;
+    background: #FFFFFF;
+}
+

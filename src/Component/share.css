@@ -1,0 +1,52 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* background: gray; */
+  /* background: #534e4e; */
+
+  box-sizing: border-box;
+}
+
+.model-wrapper1 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(189 189 189 0.9);
+}
+
+.share {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  /* margin: 25% 25% 25% 25%; */
+  background: white;
+  border: 1px solid gray;
+
+  /* align-items: center; */
+  border-radius: 10px 10px 10px 10px;
+  padding: 25px;
+  width: 22%;
+
+  top: 20%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+}
+.whats,
+.material-symbols-outlined,
+.m,
+.mail,
+.other {
+  background: white;
+}
+.m {
+  border: none;
+}
+.m:hover {
+  background-color: rgb(252, 251, 251);
+}
+
+.m {
+  margin-left: -10px;
+}

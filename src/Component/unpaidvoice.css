@@ -1,0 +1,619 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+}
+.search-box{
+    /* box-shadow: 10px 10px 5px lightblue; */
+
+/* .fa-solid{
+    box-shadow: 10px 10px 5px white;
+    border: none;
+    height: 40px; */
+
+/* .search-box input , .fa-solid-fa-magnifying-glass {
+    border: none;
+    color: rgb(44, 3, 3);
+    background-color: white;
+    border-radius: 10px;
+    /* height: 40px; */
+/* padding: 10px;
+    width: 100%;
+    margin: 10px 10px 10px 10px; *
+  
+    input{
+        flex: 1;
+        height: 50px;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        font-size: 18px;
+        color: #333;
+        /* box-shadow: 10px 10px 5px gray; *
+        border-radius: 0px 10px 10px 0px;
+        background: white;
+        padding-top: .5px; 
+        width: 90%;
+    }
+    button{
+        background: white;
+        border-radius: 10px 0px 0px 10px;
+        height: 50px;
+        border: 0;
+        outline:0;
+        margin-top: 9px;
+        padding-bottom: 3.5px;
+        margin-left: 5px;
+    
+    
+    }
+    button .fa-solid{
+        width: 25px;
+        color: #555;
+        font-size: 22px;
+        cursor: pointer;
+        background: white;
+       
+    }
+    
+    
+   
+
+     */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  /* overflow-y: hidden; */
+}
+.main {
+  display: flex;
+  height: 100vh;
+
+  overflow: scroll;
+ 
+  /* margin: 20px; */
+  /* overflow-y: hidden; */
+}
+
+
+
+::-webkit-scrollbar{
+  width: 0;
+}
+
+.right {
+  flex: 1;
+  background: #f1f1f1;
+
+  justify-content: flex-start;
+}
+
+.edit-delete {
+  background: white;
+  margin: 10px 10px 0px 10px;
+  border-radius: 7px 7px 0 0;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  /* opacity: 0.2; */
+}
+
+.btn-edit {
+  background: white;
+  border: none;
+  border-radius: 0 7px 0 0;
+}
+
+ th{
+  font-weight: 450;
+  font-size: 14px;
+}
+td{font-size: 14px;}
+
+
+
+
+
+
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  margin: 0px 10px 10px 10px;
+  border-radius: 0 0 7px 7px;
+  padding: 15px;
+  box-shadow: 3px 5px 7px gray;
+  border: none;
+}
+
+.tshirt {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  margin: 12px 10px 10px 10px;
+  border-radius: 7px;
+  padding: 7px;
+  /* display: flex; */
+  /* display: inline; */
+}
+
+.T{
+  display: flex;
+  justify-content: space-around;
+}
+.T  h4{
+  /* margin: 5px ; */
+  /* padding: 7px 7px 5px 7px; */
+  background: #8fbcff;
+  border-radius: 3px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  margin: 3px 5px 3px 3px;
+  /* display: flex; */
+  /* display: inline; */
+}
+
+.T h5{
+  font-weight: 10px;
+}
+
+.T p{
+  font-size: 12px;
+}
+
+.rupee h5{
+  margin: 10px;
+
+
+
+}
+
+
+
+.pro{
+  /* display: flex; */
+  display: inline;
+}
+
+.price_break {
+  display: flex;
+  justify-content: space-around;
+}
+
+.price_break {
+  border: 1px solid 
+  #0090BD;
+  margin: 12px 10px 0px 10px;
+  border-radius: 7px 7px 0px 0px;
+  background:
+  #ECF5FF;
+}
+/* table {
+          border-collapse: collapse;
+          width: 100%;
+          border: 1px solid green;
+        } */
+th,
+td {
+  padding: 5px;
+}
+
+.cl {
+  background: #212429;
+  border-radius: 0px 0px 7px 7px;
+  color: white;
+
+  margin: 0px 9px 10px 9px ;
+  display: flex;
+  justify-content: space-around;
+  /* gap: 5px; */
+}
+
+.undercl {
+  margin-left: 190px;
+}
+
+.invoice_payment {
+  display: flex;
+  justify-content: space-around;
+  margin: 12px 10px 10px 0px;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  margin: 12px 10px 0px 10px;
+  border-radius: 7px;
+  padding: 20px 20px 25px 20px;
+  /* position: relative; */
+  z-index: 1;
+}
+
+.pdue {
+  background: 
+  #F1F1F1;
+  /* white-space: nowrap; */
+  display: flex;
+  justify-content: end;
+  margin-top: 12px 10px 0;
+  position: relative;
+  top: -35px; /* Adjust the top value to control the overlap */
+  left: 310px; /* Adjust the left value to control the overlap */
+  z-index: 2;
+  font-size: 10px;
+  border-radius: 3px;
+  width: 31%;
+  text-align: center;
+
+  padding: 4px 7px 4px 7px;
+}
+.pdue h6 {
+  display: inline;
+  padding: 2px;
+}
+
+.pi {
+  padding: 5px 25px 5px 25px;
+  background: #f03d3e;
+  border-radius: 10px;
+  font-family: Public Sans;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  display: inline;
+}
+
+
+
+.piv2 {
+  padding: 5px 25px 5px 25px;
+  background: #009A34;
+  border-radius: 10px;
+  font-family: Public Sans;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  display: inline;
+}
+
+
+
+
+
+
+
+
+.cash {
+  padding: 9px 7px 9px 7px;
+  border-radius: 3px;
+  /* background: #ecf5ff; */
+}
+
+
+
+.cashv2 {
+  padding: 5px 7px 0px 7px;
+  border-radius: 3px;
+  background: #ecf5ff;
+  font-size: 14px;
+}
+
+
+.cashv2 p{
+  color: #009A34;
+  display: inline;
+}
+
+
+
+.got{
+  font-size: 12px;
+}
+
+
+
+.cash000{
+  color: #009A34;
+
+}
+
+
+
+
+
+
+.vi,
+.add {
+  margin-left: 10px;
+  padding: 10px;
+  width: 120%;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+}
+
+.add {
+  background: #009a34;
+  color: white;
+  font-family: " Public Sans";
+  font-size: 18px;
+}
+.vi {
+  background: #acb5bd;
+
+  color: black;
+  font-family: " Public Sans";
+  font-size: 18px;
+}
+
+.rsp {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  margin: 12px 10px 10px 10px;
+  border-radius: 7px;
+  padding: 20px;
+}
+.fa-solid-fa-phone {
+  height: 25px;
+  width: 25px;
+  background: #f40909;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Left side css */
+
+
+
+
+
+
+/* .left0{
+  background: #009a34;
+} */
+
+
+.headsale {
+  margin: 20px 10px 0px 20px;
+}
+
+
+.left {
+  flex: 1;
+  background: white;
+  margin-right: 10px;
+  height: 112vh;
+}
+
+.pic {
+  display: flex;
+  justify-content: space-around;
+}
+.nam {
+  padding-left: 10px;
+}
+
+.unpaid {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px 20px 20px;
+  border: 1px solid #faf8f7;
+  border-radius: 5px;
+  /* padding: 20px 10px 0px 10px; */
+}
+
+
+.unpaidv2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px 20px 20px;
+  border: 1px solid #faf8f7;
+  border-radius: 5px;
+  /* padding: 20px 10px 0px 10px; */
+}
+
+
+
+
+
+
+
+
+
+.pur {
+  background: #011135;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 20px 20px 0px 478px;
+  border-radius: 0px 5px 0 5px;
+  width: 20%;
+  text-align: center;
+
+   position: relative;
+   top: 21px; /* Adjust the top value to control the overlap */
+   left: 0px; /* Adjust the left value to control the overlap */
+   z-index: 2;
+   
+}
+
+
+
+.purv2 {
+  background: #011135;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 20px 20px 0px 478px;
+  border-radius: 0px 5px 0 5px;
+  width: 20%;
+  text-align: center;
+
+   position: relative;
+   top: 21px; /* Adjust the top value to control the overlap */
+   left: 0px; /* Adjust the left value to control the overlap */
+   z-index: 2;
+   
+}
+
+span{
+  display: flex;
+  justify-content: end;
+
+}
+.A {
+  display: flex;
+  justify-content: space-around;
+  /* padding-bottom: 1px; */
+  /* margin-bottom: 1px; */
+}
+
+
+.Av2 {
+  display: flex;
+  justify-content: space-around;
+  /* padding-bottom: 1px; */
+  /* margin-bottom: 1px; */
+}
+
+
+
+
+
+
+.A h4 {
+  background: #ecf5ff;
+  /* padding: 15px 15px 0px 15px; */
+  /* display: flex; */
+  margin:  5px 7px 0px 5px;
+  text-align: center;
+  /* display: inline; */
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+
+
+.Av2 h4 {
+  background: #ecf5ff;
+  /* padding: 15px 15px 0px 15px; */
+  /* display: flex; */
+  margin:  5px 7px 0px 5px;
+  text-align: center;
+  /* display: inline; */
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+.ped {
+  /* display: flex; */
+  display: inline;
+}
+.ped h5 {
+  /* padding: 10px 10px 2px 15px; */
+  margin: 7px 0px 0px 0px;
+}
+.ped p {
+  /* padding: 1px 10px 1px 15px; */
+}
+
+.R p{
+  /* padding-top: 10px; */
+  margin: 30px 20px 0px 0px;
+}
+.pp {
+  background: #f03d3e;
+  padding: 2px 7px 3px 7px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: normal;
+  color: white;
+  display: inline;
+  
+}
+
+.ppv2 {
+  background: #009A34;
+  padding: 2px 7px 3px 7px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: normal;
+  color: white;
+  display: inline;
+  
+}
+
+
+
+
+
+
+
+
+
+
+.ee {
+  background: white;
+  border: none;
+  font-size: 10px;
+  margin-left: 3px;
+  /* padding-bottom: 5px; */
+}
+
+.btn_create {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 55%;
+}
+
+.createi {
+  background: #011135;
+  color: white;
+
+  font-family: " Public Sans";
+  font-size: 18px;
+  padding: 10px;
+  width: 40%;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  margin-right: 20px;
+}
+
+/* search box */
+.row {
+  margin: 20px;
+}
+input {
+  width: 96%;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  box-shadow: 3px 4px 6px whitesmoke;
+  height: 25px;
+  outline: none;
+}
+.fa-solid {
+  background: white;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  height: 20px;
+  margin-bottom: 6px;
+  margin-top: 0px;
+}
+.row button {
+  border: none;
+  background: white;
+}
